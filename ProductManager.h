@@ -4,13 +4,14 @@
 class ProductManager
 {
 private:
-    std::vector<Product> currentProducts;
+    std::vector<Product*> currentProducts;
 
 public:
 
     void addProduct(Product); 
     void removeProduct(Product);
-    void updateProduct(std::string);
+    void updateProduct(Product, Product);
+    std::vector<Product*> getProducts() {return currentProducts;}
 
     std::map<char, float> checkoutProducts();
 
