@@ -9,7 +9,12 @@ private:
     std::vector<char> buyers;
 
 public:
-    Product(std::string name_, float price_, std::vector<char> buyers_) : name(name_), price(price_), buyers(buyers_){};
+    Product(std::string name_, float price_, std::vector<char> buyers_) {
+        this->name = name_;
+        this->price = price_;
+        this->buyers = buyers_;
+    };
+    
     ~Product(){};
     
     void setBuyers(std::vector<char>);

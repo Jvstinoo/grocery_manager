@@ -4,6 +4,13 @@ void ProductManager::addProduct(Product* product){
     currentProducts.push_back(product);
 }
 
+// Only for testing
+void ProductManager::addProducts(std::vector<Product*> products) {
+    for (Product *product: products) {
+        currentProducts.push_back(product);
+    }
+}
+
 void ProductManager::removeProduct(Product* product) {
     for(int i = 0; i < currentProducts.size(); i++) {
         if(currentProducts[i]->getName() == product->getName()){

@@ -11,6 +11,7 @@ public:
     ProductManager(){};
     ~ProductManager(){};
     void addProduct(Product *);
+    void addProducts(std::vector<Product *> products);
     void removeProduct(Product*);
     void updateProduct(Product, Product);
     std::vector<Product *> getProducts() { return currentProducts; }
