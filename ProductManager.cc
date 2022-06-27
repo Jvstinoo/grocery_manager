@@ -4,9 +4,9 @@ void ProductManager::addProduct(Product* product){
     currentProducts.push_back(product);
 }
 
-void ProductManager::removeProduct(Product *p, std::string name) {
+void ProductManager::removeProduct(Product* product) {
     for(int i = 0; i < currentProducts.size(); i++) {
-        if(p->getName() == name){
+        if(currentProducts[i]->getName() == product->getName()){
             currentProducts.erase(currentProducts.begin()+i);
             break; 
         }

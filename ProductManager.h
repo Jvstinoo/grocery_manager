@@ -8,7 +8,7 @@ private:
 
 public:
     void addProduct(Product *);
-    void removeProduct(Product *, std::string);
+    void removeProduct(Product*);
     void updateProduct(Product, Product);
     std::vector<Product *> getProducts() { return currentProducts; }
 
