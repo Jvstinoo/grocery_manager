@@ -11,9 +11,9 @@ private:
 public:
     Product(std::string name_, float price_, std::vector<char> buyers_) : name(name_), price(price_), buyers(buyers_){};
 
-    void setBuyers();
-    void setName();
-    void setPrice();
+    void setBuyers(std::vector<char>);
+    void setName(std::string);
+    void setPrice(float);
 
     std::vector<char> getBuyers();
     std::string getName();
