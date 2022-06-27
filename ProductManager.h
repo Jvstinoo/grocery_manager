@@ -7,6 +7,8 @@ private:
     std::vector<Product *> currentProducts;
 
 public:
+    ProductManager(){};
+    ~ProductManager(){};
     void addProduct(Product *);
     void removeProduct(Product*);
     void updateProduct(Product, Product);
