@@ -9,7 +9,7 @@ private:
 public:
 
     void addProduct(Product*); 
-    void removeProduct(Product);
+    void removeProduct(Product*, std::string);
     void updateProduct(std::string);
 
     std::map<char, float> checkoutProducts();
