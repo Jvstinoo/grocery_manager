@@ -12,8 +12,8 @@ void ProductManager::removeProduct(Product* product) {
         }
     }
 }
-void ProductManager::updateProduct(Product old, Product updated) {
 
+void ProductManager::updateProduct(Product old, Product updated) {
     for (Product *i: currentProducts) {
         if(i->getName() == old.getName()) {
             i->setName(updated.getName());
@@ -24,3 +24,17 @@ void ProductManager::updateProduct(Product old, Product updated) {
     }
 }
 
+std::map<char, float> ProductManager::checkoutProducts() { 
+    for (Product* product: currentProducts) {
+        for (char owners: product->getBuyers()) {
+            if(checkout.find(owners) != checkout.end()) {
+                checkout[owners] += (product->getPrice()/(product->getBuyers().size()));
+            }
+            else {
+                checkout.insert(std::pair<char, float>(owners, 
+                (product->getPrice()/product->getBuyers().size())));
+            }
+        }
+    }
+    return checkout;
+}

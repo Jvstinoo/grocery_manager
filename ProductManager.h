@@ -5,6 +5,7 @@ class ProductManager
 {
 private:
     std::vector<Product *> currentProducts;
+    std::map<char, float> checkout;
 
 public:
     ProductManager(){};
@@ -16,3 +17,4 @@ public:
 
     std::map<char, float> checkoutProducts();
 };
+
