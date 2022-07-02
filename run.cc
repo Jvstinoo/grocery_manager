@@ -10,6 +10,12 @@ int main()
     manager->addProducts({Pepsi, DrPepper, Fresca});
     std::map<char, float> out = manager->checkoutProducts();
 
+    /* A's total should be 2.99
+     * G's total should be 2.33
+     * J's total should be 2.33
+     * W's total should be 5.82
+    */
+
     for (auto it = out.begin(); it != out.end(); it++) {
         std::cout << it->first << "'s total is " << it->second << std::endl;
     }

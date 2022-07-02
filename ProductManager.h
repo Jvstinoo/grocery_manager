@@ -1,5 +1,6 @@
 #include "Product.h"
 #include <map>
+#include <math.h>
 
 class ProductManager
 {

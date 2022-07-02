@@ -35,13 +35,14 @@ std::map<char, float> ProductManager::checkoutProducts() {
     for (Product* product: currentProducts) {
         for (char owners: product->getBuyers()) {
             if(checkout.find(owners) != checkout.end()) {
-                checkout[owners] += (product->getPrice()/(product->getBuyers().size()));
+                checkout[owners] += round((product->getPrice()/product->getBuyers().size())*100.0)/100.0;
             }
             else {
                 checkout.insert(std::pair<char, float>(owners, 
-                (product->getPrice()/product->getBuyers().size())));
+                round((product->getPrice()/product->getBuyers().size())*100.0)/100.0));
             }
         }
     }
+
     return checkout;
 }
